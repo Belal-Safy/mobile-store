@@ -1,0 +1,578 @@
+/* global */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 10000;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.534);
+    position: fixed;
+    color: white;
+    font-size: 25px;
+    transition: all 5s;
+    top: 0;
+}
+
+
+/* navbar */
+
+nav {
+    min-height: 10px;
+    transition: all 1s;
+}
+
+.logo img {
+    width: 80px;
+    transition: all 500ms;
+}
+
+.logo-p {
+    font-size: 30px;
+    font-family: 'DynaPuff', cursive;
+    margin-top: 17px;
+    display: inline-block;
+    transition: all 300ms;
+}
+
+.nav-item {
+    margin: 0 1rem;
+    font-weight: 600;
+}
+
+.a-scale {
+    transition: all 300ms !important;
+}
+
+.a-scale:hover {
+    transform: scale(1.05, 1.05);
+    color: #ffc107;
+    cursor: pointer;
+}
+
+.dropdown-item:active {
+    background-color: #ffc107 !important;
+}
+
+.fa-cart-shopping,
+.fa-user {
+    font-size: 25px;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.fa-user {
+    font-size: 16px;
+}
+
+#profile-btn {
+    display: inline-block;
+    width: 32px;
+    border-radius: 25px;
+    text-decoration: none;
+    padding: 2px;
+    border: 2px solid black;
+}
+
+
+/* first section (intro) */
+
+#intro {
+    padding-top: 150px;
+}
+
+.intro-box {
+    margin: 0;
+}
+
+#intro .info1 {
+    padding-left: 15px;
+    padding: 0;
+}
+
+h3 {
+    color: #ffc107;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#intro div h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+#intro div p {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+#intro div p {
+    color: #ffc107;
+    font-weight: 650;
+}
+
+#intro div button {
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    background-color: #ffc107;
+    padding: 0.5rem 2rem;
+    font-family: "Tajawal", sans-serif;
+}
+
+#intro div button:hover {
+    transform: scale(1.1, 1.1);
+}
+
+#intro img {
+    max-width: 30rem;
+}
+
+
+/* second section (features) */
+
+#features {
+    padding: 2rem 1rem;
+    margin-top: 80px;
+    background-color: rgb(255 242 223);
+    flex-direction: column;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.feature {
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-expand {
+    position: relative;
+    z-index: 1;
+}
+
+.feature-expand::before {
+    content: "";
+    position: absolute;
+    background-color: #F1F6FC;
+    right: -60px;
+    top: -80px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    transition: all 900ms;
+    z-index: -1;
+}
+
+.feature:hover .feature-expand::before {
+    background-color: #e6eff9;
+    width: 600px;
+    height: 600px;
+}
+
+#features h1 {
+    color: #ffc107;
+}
+
+#features img {
+    max-width: 500px;
+}
+
+#features ul li {
+    cursor: default;
+    text-align: center;
+    margin: 1.5rem;
+    background-color: white;
+    border: 1px solid white;
+    width: 15rem;
+    border-radius: 25px;
+    padding: 0 10px 10px;
+    transition: all 500ms;
+}
+
+#features ul li:hover {
+    border: 1px solid #ffc107;
+    transform: scale(1.05, 1.05);
+}
+
+#features ul li h2 {
+    font-weight: bold;
+    font-size: 1.8rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    height: 2em;
+}
+
+#features ul p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+
+/* third section (latest phones) */
+
+#last-phones,
+#category {
+    padding-bottom: 5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 75px;
+}
+
+.main-title {
+    padding: 1rem 0;
+    width: 100%;
+    background-color: rgb(237 237 237);
+    margin-bottom: 3rem;
+}
+
+.phones-gallary div img {
+    transition: all 500ms;
+}
+
+.phones-gallary div img:hover {
+    transform: scale(1.1);
+}
+
+.phones-gallary div img {
+    width: 150px;
+    cursor: pointer;
+}
+
+.phones-gallary div p {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.phones-gallary div a {
+    text-decoration: none;
+}
+
+.sale {
+    height: 100px;
+    width: 100px;
+    padding-top: 50px;
+    border-top-right-radius: 100px;
+    background-color: #ffc107;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    border: white dashed 3px;
+}
+
+.sale span {
+    color: white;
+    display: block;
+    font-size: 20px;
+    font-family: 'DynaPuff', cursive;
+    transform: rotate(33deg);
+}
+
+
+/* phone section */
+
+#phone {
+    text-align: start;
+    min-height: calc(100vh - 112px);
+    padding-top: 105px;
+    background-color: #fff7de;
+}
+
+.box {
+    background-color: #ffffff;
+    border-radius: 25px;
+    padding: 50px;
+    margin: 50px 0;
+}
+
+.box img {
+    max-width: 150px;
+    margin-left: -50px;
+}
+
+.specifications i {
+    width: 25px;
+    text-align: center;
+}
+
+.percentage {
+    position: relative;
+    font-size: 50%;
+    top: -5px;
+    color: #ffc107;
+    background-color: hsl(25, 100%, 94%)
+}
+
+.price h5 {
+    text-decoration: line-through;
+    color: rgba(112, 112, 112, 0.74);
+}
+
+.nice-number {
+    display: inline-flex;
+    justify-content: stretch;
+    margin-top: 30px;
+}
+
+.nice-number input {
+    vertical-align: middle;
+    -moz-appearance: textfield;
+    box-sizing: content-box;
+    margin: 0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    width: 90px;
+    height: 48px;
+}
+
+.nice-number input::-webkit-inner-spin-button,
+.nice-number input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.nice-number button {
+    height: 50px;
+    color: #ffc107;
+    font-weight: 600;
+    font-size: 30px;
+    padding: 2px 5px;
+}
+
+.nice-number button:hover,
+.nice-number button:focus {
+    color: #ffc107;
+    background-color: rgba(232, 232, 250, 0.475) !important;
+}
+
+.bg-secondary {
+    border-radius: 0;
+    background-color: hsl(223, 64%, 98%) !important;
+}
+
+.right .fa-shopping-cart {
+    color: white;
+    margin-left: 0;
+}
+
+
+/* login */
+
+.login-box {
+    max-width: 500px;
+    background-color: #fff4d4;
+    margin: 50px auto;
+    border-radius: 25px;
+}
+
+.login-box img {
+    display: block;
+    margin: 20px auto;
+    max-width: 200px;
+}
+
+.login-box span {
+    color: #ffc107;
+}
+
+.modal-content .btn-close {
+    float: right;
+    margin: 5px;
+}
+
+
+/* cart */
+
+.cart-box {
+    border-radius: 25px;
+    border: 2px solid #ffc107;
+    padding: 20px;
+    margin: 10px;
+}
+
+.cart-box img {
+    max-width: 70px;
+}
+
+.cart-box .nice-number {
+    margin-top: 2px;
+}
+
+.cart-box .nice-number input {
+    font-size: 16px;
+    width: 40px;
+    height: 30px;
+}
+
+.cart-box .nice-number button {
+    height: 30px;
+    font-size: 18px;
+}
+
+
+/* purchase process */
+
+#purchase .card {
+    border: none;
+}
+
+#purchase .form-control {
+    border-bottom: 2px solid #eee !important;
+    border: none;
+    font-weight: 600
+}
+
+#purchase .form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #8bbafe;
+    outline: 0;
+    box-shadow: none;
+    border-radius: 0px;
+    border-bottom: 2px solid #fdcc49 !important;
+}
+
+#purchase .inputbox {
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%
+}
+
+#purchase .inputbox span {
+    position: absolute;
+    top: 7px;
+    left: 11px;
+    transition: 0.5s
+}
+
+#purchase .inputbox i {
+    position: absolute;
+    top: 13px;
+    right: 8px;
+    transition: 0.5s;
+    color: #3F51B5
+}
+
+#purchase input::-webkit-outer-spin-button,
+#purchase input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0
+}
+
+#purchase .inputbox input:focus~span {
+    transform: translateX(-0px) translateY(-15px);
+    font-size: 12px
+}
+
+#purchase .inputbox input:valid~span {
+    transform: translateX(-0px) translateY(-15px);
+    font-size: 12px
+}
+
+#purchase .card-blue {
+    background-color: #492bc4;
+}
+
+#purchase .decoration {
+    text-decoration: none;
+    font-size: 14px;
+}
+
+#purchase .decoration:hover {
+    text-decoration: none;
+    color: #fdcc49;
+}
+
+.yellow {
+    background-color: #ffc107;
+}
+
+.hightlight {
+    background-color: #888888d2;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+
+/* mobile phones styles */
+
+@media only screen and (max-width: 992px) {
+    #intro div h2 {
+        font-size: 2.5rem;
+    }
+    #intro button {
+        margin-top: 3rem;
+    }
+    #intro .info1 {
+        margin-top: 20px;
+        padding: 2rem;
+        width: 100%;
+    }
+    .intro,
+    .features,
+    .last-phones {
+        text-align: center;
+        width: 100%;
+    }
+    #features ul {
+        justify-content: center;
+    }
+    .nav-item {
+        padding: 7px 0;
+    }
+    .a-scale:hover {
+        padding-left: 30px;
+        color: #ffc107;
+        cursor: pointer;
+    }
+    .navbar-collapse {
+        padding-bottom: 20px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    #last-phones h3 {
+        font-size: 25px;
+    }
+    .box {
+        padding: 10px;
+    }
+    .box img {
+        margin: auto;
+    }
+    .logo-p {
+        font-size: 20px;
+    }
+}
+
+
+/* footer */
+
+footer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 7rem;
+}
